@@ -19,6 +19,9 @@ app.use(express.json());
 app.use(logger);
 
 // Routes
+app.get("/", (req, res) => {
+  res.send("Cactro API Server is running.");
+});
 app.use("/api", allRoutes);
 //global error handler
 app.use((err, req, res, next) => {
