@@ -30,6 +30,7 @@ app.use((err, req, res, next) => {
     error: err.message || "Internal Server Error",
   }); 
 });
+
 // Connect to DB and Start Server
 const startServer = async () => {
   try {
