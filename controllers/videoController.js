@@ -55,6 +55,7 @@ export const getVideoDetails = async (req, res, next) => {
 
     res.json(video);
   } catch (error) {
+    console.log(error)
     next(error);
   }
 };

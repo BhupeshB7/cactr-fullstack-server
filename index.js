@@ -4,8 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import connectDB from "./config/db.js";
 import logger from "./middleware/logger.js";
-import allRoutes from "./routes/index.js";
-import mongoSanitize from "express-mongo-sanitize";
+import allRoutes from "./routes/index.js"; 
 const app = express();
 
 // Middleware
@@ -13,8 +12,7 @@ app.use(
   cors({
     origin:[ "http://localhost:5173","https://cactro-fullstack-test.netlify.app"],
   })
-);
-app.use(mongoSanitize());
+); 
 app.use(express.json());
 app.use(logger);
 
